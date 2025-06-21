@@ -5,13 +5,35 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-color: black;
+    --secondary-color: white;
+    --tertiary-color: #262626; 
+}
+
+.dark-theme {
+    --primary-color: white;
+    --secondary-color: black;
+    --tertiary-color: #adadad;
+}
+
+#icon {
+    width: 30px;
+    cursor: pointer;
+}
+
+nav ul {
+    flex: 1;
+    text-align: right;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    background-color: #080808;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 #header {
@@ -44,7 +66,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #ff004f;
     text-decoration: none;
     font-size: 18px;
     position: relative ;
@@ -82,7 +104,7 @@ nav ul li a:hover::after {
 /* ---------------------------about---------------------------------- */
 #about {
     padding: 80px 0;
-    color: #ababab;
+    color: var(--secondary-color);
 }
 
 .row {
@@ -98,7 +120,7 @@ nav ul li a:hover::after {
 .about-col-1 img {
     width: 100%;
     border-radius: 15px;
-    background-color: #262626;
+    background-color: var(--primary-color);
 }
 
 .about-col-2 {
@@ -112,7 +134,7 @@ nav ul li a:hover::after {
 .sub-title {
     font-size: 60px;
     font-weight: 600;
-    color: #fff;
+    color: var(--secondary-color);
 }
 
 .tab-titles {
@@ -174,7 +196,7 @@ nav ul li a:hover::after {
 }
 
 .services-list div {
-    background-color: #262626;
+    background-color: var(--tertiary-color);
     padding: 40px;
     font-size: 13px;
     font-weight: 300;
@@ -204,7 +226,7 @@ nav ul li a:hover::after {
 
 .services-list div a {
     text-decoration: none;
-    color: #fff;
+    color: var(--secondary-color);
     font-size: 12px;
     margin-top: 20px;
     display: inline-block;
@@ -217,11 +239,11 @@ nav ul li a:hover::after {
 .services-list div:hover {
     background: #ff004f;
     transform: translateY(-10px);
-    color: black; /* Change the color to black */
+    color: var(--primary-color); /* Change the color to black */
 }
 
 .services-list div:hover h3 {
-    color: black; /* Change the color to black */
+    color: var(--primary-color); /* Change the color to black */
 }
 
 /* -------------portfolio------------- */
@@ -252,7 +274,7 @@ nav ul li a:hover::after {
 .layer {
     width: 100%;
     height: 0%;
-    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+    background: linear-gradient(var(--primary-color), #ff004f);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -279,7 +301,7 @@ nav ul li a:hover::after {
     text-decoration: none;
     font-size: 18px;
     line-height: 60px;
-    background: #fff;
+    background: var(--secondary-color);
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -302,7 +324,7 @@ nav ul li a:hover::after {
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
-    color: #fff;
+    color: var(--secondary-color);
     transition: background 0.5s;
 }
 
@@ -360,10 +382,10 @@ form input, form textarea {
     width: 100%;
     border: 0;
     outline: none;
-    background: #262626;
+    background: var(--tertiary-color);
     padding: 15px;
     margin: 15px 0;
-    color: #fff;
+    color: var(--secondary-color);
     font-size: 18px;
     border-radius: 6px;
 }
@@ -379,7 +401,7 @@ form .btn2 {
     width: 100%;
     text-align: center;
     padding: 25px 0;
-    background: #262626;
+    background: var(--primary-color);
     font-weight: 200;
     margin: 20px;
 }
@@ -402,6 +424,17 @@ nav .fa-solid {
     .header-text {
         margin-top: 100%;
         font-size: 16px;
+        color: #ff004f;
+    }
+
+    .header-text p {
+        color: #810639;
+        padding: 0.5%;
+        background-color: #ababab48;
+        border-radius: 5px;
+        text-align: center;
+        width: 75%;
+        flex: auto;
     }
     
     .header-text h1 {
@@ -414,7 +447,7 @@ nav .fa-solid {
     }
 
     nav ul {
-        background: #ff004f;
+        background: #360212;
         position: fixed;
         top: 0;
         right: -200px;
